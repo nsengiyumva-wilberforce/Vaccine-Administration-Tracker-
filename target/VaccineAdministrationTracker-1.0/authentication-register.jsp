@@ -14,7 +14,7 @@
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
     />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <title>Vaccine administration Tracker</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -67,7 +67,7 @@
               /></span>
             </div>
             <!-- Form -->
-            <form class="form-horizontal mt-3" action="index.html">
+            <form class="form-horizontal mt-3" action="signup">
               <div class="row pb-4">
                 <div class="col-12">
                   <div class="input-group mb-3">
@@ -80,6 +80,7 @@
                     </div>
                     <input
                       type="text"
+                      name="username"
                       class="form-control form-control-lg"
                       placeholder="Username"
                       aria-label="Username"
@@ -98,9 +99,28 @@
                     </div>
                     <input
                       type="text"
+                      name="email"
                       class="form-control form-control-lg"
                       placeholder="Email Address"
                       aria-label="Username"
+                      aria-describedby="basic-addon1"
+                      required
+                    />
+                  </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span
+                        class="input-group-text bg-danger text-white h-100"
+                        id="basic-addon1"
+                        ><i class="mdi mdi-email fs-4"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="text"
+                      name="role"
+                      class="form-control form-control-lg"
+                      placeholder="Role"
+                      aria-label="Role"
                       aria-describedby="basic-addon1"
                       required
                     />
@@ -115,6 +135,7 @@
                     </div>
                     <input
                       type="text"
+                      name="password"
                       class="form-control form-control-lg"
                       placeholder="Password"
                       aria-label="Password"
