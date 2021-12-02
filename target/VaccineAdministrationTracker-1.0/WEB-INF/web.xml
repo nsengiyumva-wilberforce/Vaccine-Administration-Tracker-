@@ -5,6 +5,10 @@
         <jsp-file>/healthcentresadministration.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>authentication-login</servlet-name>
+        <jsp-file>/authentication-login.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>systemsadministration</servlet-name>
         <jsp-file>/systemsadministration.jsp</jsp-file>
     </servlet>
@@ -19,10 +23,6 @@
     <servlet>
         <servlet-name>vaccineinventory</servlet-name>
         <jsp-file>/vaccineinventory.jsp</jsp-file>
-    </servlet>
-    <servlet>
-        <servlet-name>Signup</servlet-name>
-        <servlet-class>org.authentication.Signup</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>healthcentresadministration</servlet-name>
@@ -45,7 +45,7 @@
         <url-pattern>/vaccineinventory</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Signup</servlet-name>
-        <url-pattern>/Signup</url-pattern>
+        <servlet-name>authentication-login</servlet-name>
+        <url-pattern>/authentication-login</url-pattern>
     </servlet-mapping>
 </web-app>
