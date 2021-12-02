@@ -11,6 +11,7 @@
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;');
 }
 .ti-unlink {
+    @import "ie7.css";
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe604;');
 }
 .ti-trash {
