@@ -33,13 +33,12 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Tables</h4>
                     <div class="ms-auto text-end">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Library
+                                    Booking
                                 </li>
                             </ol>
                         </nav>
@@ -47,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="auth-box bg-dark border-top border-secondary">
+        <div class="container-fluid border-top border-secondary">
             <div>
                 <!-- Form -->
                 <form class="form-horizontal mt-3" action="booking.jsp">

@@ -1,4 +1,4 @@
-     <jsp:include page="metas.jsp" />
+     <jsp:include page="metas.jsp" />           
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -88,6 +88,7 @@
                   <h5 class="card-title">Turning-series chart</h5>
                   <div id="placeholder" style="height: 400px"></div>
                   <p id="choices" class="mt-3"></p>
+                   <m:login username="<%=username %>" password="<%=password %>" />
                 </div>
               </div>
             </div>
