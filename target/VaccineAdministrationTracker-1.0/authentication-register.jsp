@@ -67,7 +67,7 @@
               /></span>
             </div>
             <!-- Form -->
-            <form class="form-horizontal mt-3" action="signup">
+            <form class="form-horizontal mt-3" action="authentication-login" type="post">
               <div class="row pb-4">
                 <div class="col-12">
                   <div class="input-group mb-3">
