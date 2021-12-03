@@ -12,23 +12,28 @@
      <attribute>  
     <name>username</name>  
     <required>true</required>  
+    <rtexprvalue>true</rtexprvalue>
     </attribute> 
     <attribute>  
     <name>email</name>  
     <required>true</required>  
+    <rtexprvalue>true</rtexprvalue>
     </attribute> 
     <attribute>  
     <name>role</name>  
     <required>true</required>  
+    <rtexprvalue>true</rtexprvalue>
     </attribute> 
     <attribute>  
     <name>password</name>  
     <required>true</required>  
+    <rtexprvalue>true</rtexprvalue>
     </attribute> 
   </tag>
   <tag>
     <name>user</name>
     <tag-class>org.taghandlers.BackendTags</tag-class>
     <body-content>scriptless</body-content>
+    <rtexprvalue>true</rtexprvalue>
   </tag>
 </taglib>
