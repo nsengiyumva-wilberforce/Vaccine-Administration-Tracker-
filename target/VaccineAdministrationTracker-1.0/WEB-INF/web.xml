@@ -5,8 +5,24 @@
         <jsp-file>/healthcentresadministration.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>editUser</servlet-name>
+        <jsp-file>/editUser.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>registeruser</servlet-name>
+        <jsp-file>/registeruser.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>authentication-login</servlet-name>
         <jsp-file>/authentication-login.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <jsp-file>/logout.jsp</jsp-file>
+    </servlet>
+      <servlet>
+        <servlet-name>StartSession</servlet-name>
+        <jsp-file>/StartSession.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>viewuser</servlet-name>
@@ -57,11 +73,27 @@
         <url-pattern>/authentication-login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>authentication-register</servlet-name>
         <url-pattern>/authentication-register</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>viewuser</servlet-name>
         <url-pattern>/viewuser</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>StartSession</servlet-name>
+        <url-pattern>/StartSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registeruser</servlet-name>
+        <url-pattern>/registeruser</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>editUser</servlet-name>
+        <url-pattern>/updateUser</url-pattern>
     </servlet-mapping>
 </web-app>

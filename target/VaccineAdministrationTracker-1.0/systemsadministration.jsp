@@ -1,4 +1,14 @@
 <jsp:include page="metas.jsp" />
+<%@ taglib uri="WEB-INF/CustomTags.tld" prefix="m" %> 
+<%
+            //delete user
+            if (request.getParameter("delete_username") != null) {
+                String username = request.getParameter("delete_username");
+        %>
+        <m:DeleteUser username="<%=username %>" />
+        <%
+            }
+        %>
 
 <!-- ============================================================== -->
 <!-- Preloader - style you can find in spinners.css -->
@@ -64,50 +74,7 @@
                                     +Add User
                                 </a></h5>
                             <div class="table-responsive">
-                                <table
-                                    id="zero_config"
-                                    class="table table-striped table-bordered"
-                                    >
-                                    <thead>
-                                        <tr>
-                                            <th>Username</th>
-                                            <th>email</th>
-                                            <th>role</th>
-                                            <th>password</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td><button type="button" class="btn btn-cyan btn-sm text-white">
-                                                    Edit
-                                                </button><button type="button" class="btn btn-danger btn-sm text-white">
-                                                    Delete
-                                                </button>
-                                                <a type="button" href="viewuser" class="btn btn-primary btn-sm text-white">
-                                                    View
-                                                </a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <m:FetchUsers />
                             </div>
                         </div>
                     </div>

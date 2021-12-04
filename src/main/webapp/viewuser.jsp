@@ -1,4 +1,14 @@
 <jsp:include page="metas.jsp" />
+ <%
+            //prevent back button after logout
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Expires", "0");
+            //check session
+            if (session.getAttribute("start") == null) {
+                response.sendRedirect("authentication-login");
+            }
+        %>
 
 <!-- ============================================================== -->
 <!-- Preloader - style you can find in spinners.css -->

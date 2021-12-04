@@ -1,4 +1,14 @@
-     <jsp:include page="metas.jsp" />           
+     <jsp:include page="metas.jsp" />  
+      <%
+            //prevent back button after logout
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Expires", "0");
+            //check session
+            if (session.getAttribute("start") == null) {
+                response.sendRedirect("authentication-login");
+            }
+        %>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -88,7 +98,6 @@
                   <h5 class="card-title">Turning-series chart</h5>
                   <div id="placeholder" style="height: 400px"></div>
                   <p id="choices" class="mt-3"></p>
-                   <m:login username="<%=username %>" password="<%=password %>" />
                 </div>
               </div>
             </div>

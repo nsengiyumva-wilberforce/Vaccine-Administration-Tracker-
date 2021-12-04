@@ -1,20 +1,31 @@
 <jsp:include page="metas.jsp" />
-<%@ taglib uri="WEB-INF/CustomTags.tld" prefix="add" %> 
+<%@ taglib uri="WEB-INF/CustomTags.tld" prefix="m" %>
+ <%
+            //prevent back button after logout
+            response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Expires", "0");
+            //check session
+            if (session.getAttribute("start") == null) {
+                response.sendRedirect("authentication-login");
+            }
+        %>
 <%
-    //add user
-    if (request.getParameter("username") != null && request.getParameter("password") != null && request.getParameter("first_name") != null && request.getParameter("last_name") != null && request.getParameter("email") != null && request.getParameter("role") != null) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String email = request.getParameter("email");
-        String role = request.getParameter("role");
-        String first_name = request.getParameter("first_name");
-        String last_name = request.getParameter("last_name");
-        String healthcentre = request.getParameter("healthcentre");
-%>
-<add:RegisterUser u="<%=username%>" p="<%=password%>" e="<%=email %>" r="<%=role %>" f="<%=first_name%>" l="<%=last_name %>" h="<%=healthcentre %>" />
-<%
-    }
-%>
+            //update user
+            if (request.getParameter("update_username") != null) {
+                String username = request.getParameter("username");
+                String first_name = request.getParameter("first_name");
+                String last_name = request.getParameter("last_name");
+                String password = request.getParameter("password");
+                String healthcentre = request.getParameter("healthcentre");
+                String email = request.getParameter("email");
+                String role = request.getParameter("role");
+                String uid = request.getParameter("update_username");
+        %>
+        <m:UpdateUser u="<%=username%>" p="<%=password%>" f="<%=first_name%>" l="<%=last_name %>" h="<%=healthcentre%>" e="<%=email%>" r="<%=role%>" uid="<%=uid%>" />
+        <%
+            }
+        %>
 
 <!-- ============================================================== -->
 <!-- Preloader - style you can find in spinners.css -->
@@ -54,7 +65,7 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    Users/Register user
+                                    Users/Update User
                                 </li>
                             </ol>
                         </nav>
@@ -65,7 +76,7 @@
         <div class="container-fluid border-top border-secondary">
             <div>
                 <!-- Form -->
-                <form class="form-horizontal mt-3" action="registeruser" method="post">
+                <form class="form-horizontal mt-3" action="updateUser" method="post">
                     <div class="row pb-4">
                         <div class="col-12">
                             <div class="input-group mb-3">
@@ -76,6 +87,7 @@
                                         ><i class="mdi mdi-account fs-4"></i
                                         ></span>
                                 </div>
+                                
                                 <input
                                     type="text"
                                     class="form-control form-control-lg"
@@ -83,7 +95,27 @@
                                     aria-label="Username"
                                     aria-describedby="basic-addon1"
                                     name="username"
-                                    required
+                                    value="<m:SelectSingleTag username='<%=request.getParameter("update_username") %>' field='username' />"
+                                    
+                                    />
+                            </div>
+                            <div class="input-group mb-3">
+<!--                                <div class="input-group-prepend">
+                                    <span
+                                        class="input-group-text bg-success text-white h-100"
+                                        id="basic-addon1"
+                                        ><i class="mdi mdi-account fs-4"></i
+                                        ></span>
+                                </div>-->
+                                <input
+                                    type="hidden"
+                                    class="form-control form-control-lg"
+                                    placeholder="update_username"
+                                    aria-label="Update_username"
+                                    aria-describedby="basic-addon1"
+                                    name="update_username"
+                                    value="@wilberforceking"
+                                    
                                     />
                             </div>
                             <div class="input-group mb-3">
@@ -101,7 +133,7 @@
                                     aria-label="First Name"
                                     aria-describedby="basic-addon1"
                                     name="first_name"
-                                    required
+                                    
                                     />
                             </div>
                             <div class="input-group mb-3">
@@ -119,7 +151,7 @@
                                     aria-label="Last Name"
                                     aria-describedby="basic-addon1"
                                     name="last_name"
-                                    required
+                                    
                                     />
                             </div>
                             <div class="input-group mb-3">
@@ -137,7 +169,7 @@
                                     aria-label="password"
                                     aria-describedby="basic-addon1"
                                     name="password"
-                                    required
+                                    
                                     />
                             </div>
                             <!-- email -->
@@ -156,7 +188,7 @@
                                     aria-label="healthCenter"
                                     aria-describedby="basic-addon1"
                                     name="healthcentre"
-                                    required
+                                    
                                     />
                             </div>
                             <div class="input-group mb-3">
@@ -173,7 +205,7 @@
                                     placeholder="Email"
                                     aria-label="Email"
                                     aria-describedby="basic-addon1"
-                                    required
+                                    
                                     name="email"
                                     />
                             </div>
@@ -192,7 +224,7 @@
                                     aria-label="Role"
                                     aria-describedby="basic-addon1"
                                     name="role"
-                                    required
+                                    
                                     />
                             </div>
                             <div class="row border-top border-secondary">
@@ -203,7 +235,7 @@
                                                 class="btn btn-block btn-lg btn-info"
                                                 type="submit"
                                                 >
-                                                Register User
+                                                Update Record
                                             </button>
                                         </div>
                                     </div>

@@ -33,6 +33,19 @@
   </head>
 
   <body>
+      <%@ taglib uri="WEB-INF/CustomTags.tld" prefix="add" %> 
+          <%
+            //add user
+            if (request.getParameter("username") != null && request.getParameter("password") != null) {
+                String username = request.getParameter("username");
+                String password = request.getParameter("password");
+                String email = request.getParameter("email");
+                String role = request.getParameter("role");
+        %>
+        <add:Register u="<%=username%>" p="<%=password%>" e="<%=email %>" r="<%=role %>" />
+        <%
+            }
+        %>
     <div class="main-wrapper">
       <!-- ============================================================== -->
       <!-- Preloader - style you can find in spinners.css -->
@@ -67,7 +80,7 @@
               /></span>
             </div>
             <!-- Form -->
-            <form class="form-horizontal mt-3" action="authentication-login" type="post">
+            <form class="form-horizontal mt-3" action="authentication-register" method="post">
               <div class="row pb-4">
                 <div class="col-12">
                   <div class="input-group mb-3">
