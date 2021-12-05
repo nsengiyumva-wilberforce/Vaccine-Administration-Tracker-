@@ -5,7 +5,7 @@
   <tlib-version>1.2</tlib-version>
   <jsp-version>2.0</jsp-version>
   <short-name>c</short-name>
-  <uri>crud</uri>
+  <uri>Vaccine administration tracker</uri>
   <tag>
     <name>Register</name>
     <tag-class>org.taghandlers.RegisterHandler</tag-class>
@@ -31,6 +31,7 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  
   <tag>
     <name>RegisterUser</name>
     <tag-class>org.taghandlers.RegisterUserHandler</tag-class>
@@ -71,9 +72,32 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  
   <tag>
+    <name>RegisterVaccine</name>
+    <tag-class>org.taghandlers.RegisterUserHandler</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>v</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>a</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag> 
     <name>FetchUsers</name>
     <tag-class>org.taghandlers.FetchAllUsers</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  
+  <tag>
+    <name>FetchBooking</name>
+    <tag-class>org.health.health.FetchBookings</tag-class>
     <body-content>empty</body-content>
   </tag>
   <tag>
@@ -86,6 +110,7 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  
   <tag>
     <name>UpdateUser</name>
     <tag-class>org.taghandlers.UpdateUserHandler</tag-class>
@@ -131,6 +156,7 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  
   <tag>
     <name>Login</name>
     <tag-class>org.taghandlers.LoginTag</tag-class>
@@ -146,6 +172,7 @@
       <rtexprvalue>true</rtexprvalue>
     </attribute>
   </tag>
+  
   <tag>
     <name>SelectSingleTag</name>
     <tag-class>org.taghandlers.SingleFieldHandler</tag-class>
@@ -160,4 +187,11 @@
       <required>true</required>
     </attribute>
   </tag>
+  
+  <tag>
+    <name>FetchAllBookings</name>
+    <tag-class>org.health.health.FetchAllBookings</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  
 </taglib>

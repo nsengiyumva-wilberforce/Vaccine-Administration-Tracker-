@@ -1,4 +1,5 @@
 <jsp:include page="metas.jsp" />
+<%@ taglib uri="WEB-INF/CustomTags.tld" prefix="m" %> 
  <%
             //prevent back button after logout
             response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
@@ -56,102 +57,20 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid border-top border-secondary">
-            <div>
-                <!-- Form -->
-                <form class="form-horizontal mt-3" action="booking.jsp">
-                    <div class="row pb-4">
-                        <div class="col-12">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span
-                                        class="input-group-text bg-success text-white h-100"
-                                        id="basic-addon1"
-                                        ><i class="mdi mdi-account fs-4"></i
-                                        ></span>
-                                </div>
-                                <input
-                                    type="text"
-                                    class="form-control form-control-lg"
-                                    placeholder="Full Name"
-                                    aria-label="Name"
-                                    aria-describedby="basic-addon1"
-                                    name="name"
-                                    required
-                                    />
-                            </div>
-                            <!-- email -->
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span
-                                        class="input-group-text bg-danger text-white h-100"
-                                        id="basic-addon1"
-                                        ><i class="mdi mdi-email fs-4"></i
-                                        ></span>
-                                </div>
-                                <input
-                                    type="text"
-                                    class="form-control form-control-lg"
-                                    placeholder="Health Center"
-                                    aria-label="healthCenter"
-                                    aria-describedby="basic-addon1"
-                                    name="healthCenter"
-                                    required
-                                    />
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span
-                                        class="input-group-text bg-warning text-white h-100"
-                                        id="basic-addon2"
-                                        ><i class="mdi mdi-lock fs-4"></i
-                                        ></span>
-                                </div>
-                                <input
-                                    type="text"
-                                    class="form-control form-control-lg"
-                                    placeholder="vaccine Name"
-                                    aria-label="vccine Name"
-                                    aria-describedby="basic-addon1"
-                                    required
-                                    name="vaccine"
-                                    />
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span
-                                        class="input-group-text bg-info text-white h-100"
-                                        id="basic-addon2"
-                                        ><i class="mdi mdi-lock fs-4"></i
-                                        ></span>
-                                </div>
-                                <input
-                                    type="date"
-                                    class="form-control form-control-lg"
-                                    placeholder="Date to be vaccinated"
-                                    aria-label="dtbv"
-                                    aria-describedby="basic-addon1"
-                                    name="dtbv"
-                                    required
-                                    />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Booking List<a type="button" class="btn btn-success btn-sm float-end text-white" href="book.jsp">
+                                    +Book Now
+                                </a></h5>
+                            <div class="table-responsive">
+                                <m:FetchBooking />
                             </div>
                         </div>
                     </div>
-                    <div class="row border-top border-secondary">
-                        <div class="col-12">
-                            <div class="form-group">
-                                <div class="pt-3 d-grid">
-                                    <button
-                                        class="btn btn-block btn-lg btn-info"
-                                        type="submit"
-                                        >
-                                        Book Now
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
         <!-- ============================================================== -->
@@ -160,58 +79,7 @@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-        <div class="container-fluid">
-            <!-- ============================================================== -->
-            <!-- Start Page Content -->
-            <!-- ============================================================== -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Booking List</h5>
-                            <div class="table-responsive">
-                                <table
-                                    id="zero_config"
-                                    class="table table-striped table-bordered"
-                                    >
-                                    <thead>
-                                        <tr>
-                                            <th>Full Name</th>
-                                            <th>Health Centre</th>
-                                            <th>Vaccine to be administered</th>
-                                            <th>Booking Date</th>
-                                            <th>Vaccination Date</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- ============================================================== -->
             <!-- End PAge Content -->
             <!-- ============================================================== -->
@@ -222,7 +90,7 @@
             <!-- ============================================================== -->
             <!-- End Right sidebar -->
             <!-- ============================================================== -->
-        </div>
+ 
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
         <!-- ============================================================== -->
