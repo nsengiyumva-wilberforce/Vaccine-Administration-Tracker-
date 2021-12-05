@@ -6,6 +6,7 @@
   <jsp-version>2.0</jsp-version>
   <short-name>c</short-name>
   <uri>Vaccine administration tracker</uri>
+
   <tag>
     <name>Register</name>
     <tag-class>org.taghandlers.RegisterHandler</tag-class>
@@ -160,7 +161,7 @@
   <tag>
     <name>Login</name>
     <tag-class>org.taghandlers.LoginTag</tag-class>
-    <body-content>empty</body-content>
+    <body-content>scriptless</body-content>
     <attribute>
       <name>username</name>
       <required>true</required>
@@ -187,6 +188,7 @@
       <required>true</required>
     </attribute>
   </tag>
+<<<<<<< HEAD
   
   <tag>
     <name>FetchAllBookings</name>
@@ -194,4 +196,36 @@
     <body-content>empty</body-content>
   </tag>
   
+=======
+  <tag>
+    <name>addbooking</name>
+    <tag-class>org.health.health.addbooking</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>person</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>healthcentre</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>vaccine</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>date</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>time</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+>>>>>>> 230ee4ef676f0c130678e303b43167cc0aa27c6f
 </taglib>

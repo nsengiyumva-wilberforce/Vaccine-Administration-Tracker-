@@ -20,7 +20,7 @@
         <servlet-name>logout</servlet-name>
         <jsp-file>/logout.jsp</jsp-file>
     </servlet>
-      <servlet>
+    <servlet>
         <servlet-name>StartSession</servlet-name>
         <jsp-file>/StartSession.jsp</jsp-file>
     </servlet>
@@ -37,6 +37,10 @@
         <jsp-file>/booking.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>book</servlet-name>
+        <jsp-file>/book.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>vaccineadministration</servlet-name>
         <jsp-file>/vaccineadministration.jsp</jsp-file>
     </servlet>
@@ -44,7 +48,7 @@
         <servlet-name>vaccineinventory</servlet-name>
         <jsp-file>/vaccineinventory.jsp</jsp-file>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>authentication-register</servlet-name>
         <jsp-file>/authentication-register.jsp</jsp-file>
     </servlet>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>vaccineadministration</servlet-name>
         <url-pattern>/vaccineadministration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>book</servlet-name>
+        <url-pattern>/book</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>vaccineinventory</servlet-name>
@@ -84,7 +92,7 @@
         <servlet-name>viewuser</servlet-name>
         <url-pattern>/viewuser</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>StartSession</servlet-name>
         <url-pattern>/StartSession</url-pattern>
     </servlet-mapping>
@@ -92,7 +100,7 @@
         <servlet-name>registeruser</servlet-name>
         <url-pattern>/registeruser</url-pattern>
     </servlet-mapping>
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>editUser</servlet-name>
         <url-pattern>/updateUser</url-pattern>
     </servlet-mapping>
