@@ -188,15 +188,12 @@
       <required>true</required>
     </attribute>
   </tag>
-<<<<<<< HEAD
-  
   <tag>
     <name>FetchAllBookings</name>
     <tag-class>org.health.health.FetchAllBookings</tag-class>
     <body-content>empty</body-content>
   </tag>
   
-=======
   <tag>
     <name>addbooking</name>
     <tag-class>org.health.health.addbooking</tag-class>
@@ -227,5 +224,4 @@
       <type>java.lang.String</type>
     </attribute>
   </tag>
->>>>>>> 230ee4ef676f0c130678e303b43167cc0aa27c6f
 </taglib>
