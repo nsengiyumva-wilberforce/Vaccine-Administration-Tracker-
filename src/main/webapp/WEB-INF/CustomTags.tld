@@ -5,7 +5,6 @@
   <tlib-version>1.2</tlib-version>
   <jsp-version>2.0</jsp-version>
   <short-name>c</short-name>
-  <uri>crud</uri>
   <tag>
     <name>Register</name>
     <tag-class>org.taghandlers.RegisterHandler</tag-class>
@@ -134,7 +133,7 @@
   <tag>
     <name>Login</name>
     <tag-class>org.taghandlers.LoginTag</tag-class>
-    <body-content>empty</body-content>
+    <body-content>scriptless</body-content>
     <attribute>
       <name>username</name>
       <required>true</required>
@@ -158,6 +157,36 @@
     <attribute>
       <name>field</name>
       <required>true</required>
+    </attribute>
+  </tag>
+  <tag>
+    <name>addbooking</name>
+    <tag-class>org.health.health.addbooking</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>person</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>healthcentre</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>vaccine</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>date</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>time</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
     </attribute>
   </tag>
 </taglib>
